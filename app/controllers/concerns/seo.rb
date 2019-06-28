@@ -7,19 +7,22 @@ module Seo
       end
     end
     
-    def current_user # for Devise-like compatibility
-      spree_current_user
+    #Note: Devise not installed in case another Gem containing a specific version is required.
+    #Avoiding version-conflict
+    def current_user # for compatibility between Devise-compatible components and Spree (for e-commerce)
+      if defined?(spree_current_user) then return spree_current_user end
+      return
     end
   end
   def sitename
-    'Shopping Mall'
+    'Template Site'
   end
   def prepare_meta_tags(options={})
     if options.nil? then options = (@seo_opts || Hash.new) end
 
     site_name   = sitename
-    title       = 'Everything you need'
-    description = "Lots of shops for just what you need, and maybe some stuff you don't."
+    title       = 'Template Title'
+    description = "Template Description and stuff."
     current_url = request.url
     logo_url = ''
 
