@@ -4,8 +4,8 @@ module GeneralScoping
   included do
     scope :really_all, ->() {unscope(where: :deleted_at) if deleted_at.present?}
     scope :like, ->(field, value) {where(self.arel_table[field].matches("%#{value.strip}%"))}
-    scope :like_contains, ->(field, value) {where(arel_table[field].include?(value))}
-    scope :like_serialized_exact, ->(field, value) {where(arel_table[field].matches(value))}
+    scope :like_serialized_exact, ->(field, value) {where(arel_table[field].include?(value))}
+    scope :like_contains, ->(field, value) {where(arel_table[field].matches(value))}
     scope :only_as_ordered, ->(field, arr) {
       where(field.to_s => arr).order_as_specified(field.to_s => arr.compact.uniq)
     }

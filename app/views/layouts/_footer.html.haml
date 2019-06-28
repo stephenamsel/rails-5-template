@@ -1,0 +1,8 @@
+- browser = Browser.new(browser)
+.row.d-xs-none.d-md-block
+  -# non-mobile content
+.row.d-block-xs.d-md-none
+  -# mobile content
+  
+- if browser.device.iphone? #checking whether we need to raise everything to avoid getting covered by iphone interface
+  .row{style: 'padding-bottom: 15px'}

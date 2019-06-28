@@ -47,6 +47,7 @@ gem 'paper_trail', '~> 10.3'
 gem 'wicked_pdf', '~> 1.4'
 gem 'wkhtmltopdf-binary', '~> 0.12.4' #https://github.com/mileszs/wicked_pdf
 gem 'que', '~> 0.14'
+gem 'paranoia'
 
 #SEO
 gem 'meta-tags', '~> 2.11.1'
