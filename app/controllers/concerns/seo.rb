@@ -32,10 +32,10 @@ module Seo
       site:        site_name,
       title:       title,
       description: description,
-      keywords:    ['Shopping', 'Start-ups', 'Full-Service'],
+      keywords:    ['Rails 5', 'Template', 'Website'],
       twitter: {
         site_name: site_name,
-        site: 'Shopping Mall',
+        site: 'Template Rails 5 Website',
         card: 'summary',
         description: description,
         image: logo_url
